@@ -1,3 +1,4 @@
+/* Estilos gerais */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,14 +12,14 @@ body {
     color: #ffffff;
 }
 
+/* Cabeçalho */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    transition: background 0.3s;
 }
 
 .logo {
@@ -29,23 +30,23 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
+    gap: 30px; /* Aumenta o espaço entre os itens do menu */
 }
 
 nav a {
     color: #00bfff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    font-size: 1.1rem; /* Tamanho da fonte */
+    transition: color 0.3s, transform 0.3s; /* Transição suave */
 }
 
 nav a:hover {
     color: #00a3e0;
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
+/* Seção Hero */
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -57,6 +58,7 @@ nav a:hover {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
+/* Botões */
 .button {
     display: inline-block;
     background: #00bfff;
@@ -73,6 +75,7 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+/* Main e Seções */
 main {
     padding: 20px;
 }
@@ -90,6 +93,7 @@ section:hover {
     transform: translateY(-5px);
 }
 
+/* Notícia */
 #noticias {
     padding: 20px;
 }
@@ -110,12 +114,14 @@ section:hover {
     font-size: 1.1rem;
 }
 
+/* Grid */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
+/* Cards */
 .card {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
@@ -134,6 +140,7 @@ section:hover {
     border-radius: 10px;
 }
 
+/* Imagens */
 .equipe-logo {
     width: 150px;
     margin: 20px 0;
@@ -147,6 +154,7 @@ section:hover {
     margin: 20px 0; /* Espaçamento acima e abaixo */
 }
 
+/* Rodapé */
 footer {
     text-align: center;
     padding: 10px;
@@ -158,7 +166,8 @@ form {
     flex-direction: column;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
@@ -170,7 +179,7 @@ form input, form textarea {
 form button {
     background: #00bfff;
     color: white;
-    padding: 10px;
+    padding: 10px 20px; /* Ajusta o tamanho do botão */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -188,6 +197,29 @@ form button:hover {
     font-weight: bold;
 }
 
+/* Estilos para redes sociais */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 20px;
+}
+
+.social-icon {
+    margin: 0 15px; /* Espaçamento entre os ícones */
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icon img {
+    width: 40px; /* Ajuste o tamanho dos ícones */
+    height: auto; /* Mantém a proporção */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+    opacity: 0.8; /* Leve desbotamento ao passar o mouse */
+}
+
 /* Efeito de animação para fade-in */
 .fade-in {
     opacity: 0;
@@ -200,28 +232,6 @@ form button:hover {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Social Media Icons */
-.social-media {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-icon {
-    margin: 0 15px;
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-.social-icon img {
-    width: 50px; /* Tamanho dos ícones */
-    height: auto;
-}
-
-.social-icon:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-    opacity: 0.8; /* Leve desbotamento ao passar o mouse */
 }
 
 /* Estilos para a equipe */
@@ -241,7 +251,7 @@ form button:hover {
 }
 
 .team-member img {
-    width: 100%; /* Ocupa 100% do contêiner */
+    width: 100%;
     max-width: 150px; /* Limita a largura máxima */
     max-height: 150px; /* Limita a altura máxima */
     height: auto; /* Mantém a proporção */
@@ -252,29 +262,30 @@ form button:hover {
 /* Responsividade */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Muda a direção para coluna */
+        align-items: center; /* Centraliza os itens */
+        gap: 15px; /* Reduz o espaço entre os itens */
     }
 
-    nav ul li {
-        margin: 10px 0;
+    nav a {
+        font-size: 1rem; /* Ajusta o tamanho da fonte */
     }
 
     .hero h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* Ajusta o tamanho do título na seção hero */
+    }
+
+    .button {
+        padding: 8px 12px; /* Ajusta o tamanho do botão */
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        width: 120px;
+        width: 120px; /* Ajusta a largura do logo */
     }
 
     .hero h2 {
-        font-size: 1.5rem;
-    }
-
-    .button {
-        padding: 8px 12px;
+        font-size: 1.5rem; /* Ajusta o tamanho do título na seção hero */
     }
 }
