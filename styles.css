@@ -124,6 +124,74 @@ section:hover {
     border-radius: 10px;
 }
 
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Espaço abaixo do formulário */
+}
+
+footer input[type="text"],
+footer textarea {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+footer button {
+    background: #00bfff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+footer button:hover {
+    background: #008fbf;
+}
+
+/* Estilos para ícones de redes sociais */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.social-icon {
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icon img {
+    width: 30px; /* Tamanho dos ícones */
+    height: auto; /* Mantém a proporção */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Texto de copyright */
+footer p {
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
 /* Responsividade */
 @media (max-width: 1080px) {
     .hero h2 {
@@ -158,11 +226,6 @@ section:hover {
         padding: 10px; /* Menos padding em telas menores */
     }
 
-    .team-member {
-        width: 100%; /* Ocupa toda a largura no mobile */
-        max-width: 300px; /* Limita a largura máxima */
-    }
-
     .grid {
         grid-template-columns: 1fr; /* Uma coluna em dispositivos muito pequenos */
     }
@@ -175,9 +238,5 @@ section:hover {
 
     .hero h2 {
         font-size: 1.5rem;
-    }
-
-    .team-member {
-        max-width: 90%; /* Limite adicional para dispositivos menores */
     }
 }
