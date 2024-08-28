@@ -192,6 +192,29 @@ footer p {
     font-size: 0.8rem;
 }
 
+/* Estilos para a equipe */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+}
+
+.team-member img {
+    width: 100%; /* Ocupa 100% do contêiner */
+    max-width: 150px; /* Define uma largura máxima */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px; /* Arredonda os cantos */
+}
+
 /* Responsividade */
 @media (max-width: 1080px) {
     .hero h2 {
